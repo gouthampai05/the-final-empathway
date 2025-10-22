@@ -136,7 +136,7 @@ export default function CompleteTherapistProfile() {
         });
         if (result.success) {
           try { localStorage.removeItem("pendingTherapistDetails"); } catch {}
-          router.push("/therapist/dashboard");
+          router.push("/");
           return;
         }
       } catch (err) {
