@@ -5,7 +5,7 @@
  * to be used throughout the application with framer-motion.
  */
 
-import { Variants, Transition } from 'framer-motion';
+import { Variants, Transition, TargetAndTransition } from 'framer-motion';
 
 // ============================================================================
 // TIMING CONSTANTS
@@ -201,7 +201,7 @@ export const buttonHover = {
 };
 
 // For loading/spinning animations
-export const pulseAnimation = {
+export const pulseAnimation: TargetAndTransition = {
   scale: [1, 1.05, 1],
   transition: {
     duration: 2,
@@ -211,7 +211,7 @@ export const pulseAnimation = {
 };
 
 // For status indicators
-export const statusPulse = {
+export const statusPulse: TargetAndTransition = {
   scale: [1, 1.2, 1],
   transition: {
     duration: 2,
@@ -253,7 +253,7 @@ export const withDelay = (delay: number): Transition => ({
 export const fadeInUpWithDelay = (
   index: number,
   delayMultiplier: number = STAGGER_DELAY.normal
-): { initial: any; animate: any; transition: Transition } => ({
+): { initial: { opacity: number; y: number }; animate: { opacity: number; y: number }; transition: Transition } => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: {
