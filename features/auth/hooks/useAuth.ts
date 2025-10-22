@@ -24,15 +24,14 @@ export const useAuth = () => {
         password: data.password,
         role: "therapist"
       });
-      if (result?.redirectTo) {
-        router.push(result.redirectTo);
-      }
+      router.push('/dashboard');
     });
   };
 
   const registerPatientUser = async (data: PatientRegistrationData & { profilePic: string }) => {
     await submitForm(async () => {
-      await registerPatient(data);
+      const result = await registerPatient(data);
+      router.push('/dashboard');
     });
   };
 
