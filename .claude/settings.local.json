@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(while read dir)",
+      "Bash(do echo \"$dir\")",
+      "Bash(ls:*)",
+      "Bash(done)",
+      "Bash(for:*)",
+      "Bash(do if [ -f \"$dir/index.ts\" ])",
+      "Bash(then echo \"$dir: YES\")",
+      "Bash(else echo \"$dir: MISSING\")",
+      "Bash(fi)",
+      "Bash(test:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(git diff:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
